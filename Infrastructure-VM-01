@@ -1,0 +1,17 @@
+12-10-2025 - Built infra-01 VM
+
+
+## Goal
+Create and have a stable control VM for automation before workloads.
+
+
+## Initial State
+Fresh proxmox host.
+
+
+## Changes
+- Created VM running Ubuntu server 24.04.3
+- Installed Docker, Git, SSH
+
+## Problems
+None encounter
