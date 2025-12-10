@@ -12,6 +12,14 @@ Fresh proxmox host.
 ## Changes
 - Created VM running Ubuntu server 24.04.3
 - Installed Docker, Git, SSH
+- installed and configured SSH keys
+- Edited config files
+/etc/ssh/sshd_config
+/etc/ssh/sshd_config.d/50-cloud-init.conf
+* edit lines to reflect:
+PubkeyAuthentication yes (may need to manually write this into config depending on version)
+PasswordAuthentication no
+ UsePAM no
 
 ## Problems
 None encounter
