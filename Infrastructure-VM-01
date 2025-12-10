@@ -22,4 +22,4 @@ PasswordAuthentication no
  UsePAM no
 
 ## Problems
-None encounter
+Issues enforcing key-only login due to cloud-init.conf file overriding sshd_config file policies.
