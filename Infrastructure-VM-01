@@ -22,4 +22,5 @@ PasswordAuthentication no
  UsePAM no
 
 ## Problems
-Issues enforcing key-only login due to cloud-init.conf file overriding sshd_config file policies.
+- Issues enforcing key-only login due to cloud-init.conf file overriding sshd_config file policies.
+fixed by changing policy in both configs
