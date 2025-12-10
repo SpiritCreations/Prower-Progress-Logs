@@ -1,0 +1,37 @@
+12-10-2025 Built monitoring-01 VM
+
+
+## Goal
+Create a VM with the role of monitoring VMs and containers, whilst sending updates to centralized dashboard.
+
+
+## Initial State
+Fresh proxmox host.
+
+
+## Changes
+- Created VM running Ubuntu server 24.04.3
+- Installed Docker Engine
+- Installed Docker Compose (ubuntu repo version did not have this by default, had to be manually installed)
+- Verified installations
+
+
+### Created Directories
+- ~/monitoring
+
+
+### Created files
+- docker-compose.yml
+- Stack includes: 
+Prometheus
+Grafana
+Node Exporter
+### ^ Created usding heredoc (due to SSH paste corruption).
+
+## Problems
+- Corrupted YAML via VIM due to nano through ssh not working
+fixed by using heredoc (<<E0F)
+- Docker compose not found
+fixed by installing standalone docker compose
+- -d flag not recognized
+Fixed once proper docker compose was installed
