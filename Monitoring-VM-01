@@ -14,6 +14,14 @@ Fresh proxmox host.
 - Installed Docker Engine
 - Installed Docker Compose (ubuntu repo version did not have this by default, had to be manually installed)
 - Verified installations
+- installed and configured SSH keys
+- Edited config files
+/etc/ssh/sshd_config
+/etc/ssh/sshd_config.d/50-cloud-init.conf
+* edit lines to reflect:
+PubkeyAuthentication yes (may need to manually write this into config depending on version)
+PasswordAuthentication no
+ UsePAM no
 
 
 ### Created Directories
