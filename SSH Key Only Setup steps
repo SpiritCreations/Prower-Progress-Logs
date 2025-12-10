@@ -1,0 +1,62 @@
+# Prerequisites
+- Ubuntu VM installed and running Ubuntu server 24.04.3
+- Local machines with SSH client installed
+
+# 
+
+- SSH key pair (ed25519 is what i used) generated locally
+    ssh-keygen -t ed25519 -C "prower-infra-key"
+- Copy public key to VM
+    ssh-copy-id <VM-NAME>@<VM-IP>
+
+# Step 1 
+    - Verifying functioning SSH server
+ps -ef | grep sshd
+- confirm the binary is /usr/sbin/sshd
+- confirm package:
+dpkg -S /usr/sbin/sshd
+- This SHOULD show "openssh-server"
+
+# Step 2 
+    - Editing SSH server configs
+- edit main config
+sudo vim /etc/ssh/sshd_config
+- check the following lines exist, if they dont write them in
+PubkeyAuthentication yes
+PasswordAuthentication no
+UsePAM no
+
+# Step 3 
+    - check cloud-init config (this will override one of the lines)
+- edit cloud-init
+sudo vim /etc/ssh/sshd_config.d/50-cloud-init.conf
+- check for
+PasswordAuthentication no
+
+# Step 4 
+    - Validate SSH configs
+sudo sshd -t 
+- no output means syntax is working as expected
+
+# Step 5
+    - Restart SSH server (keep your running ssh session open until verification)
+sudo systemctl restart ssh
+
+# Step 6
+    - Verify running configs
+sudo sshd -T | grep -i passwordauthentication
+sudo sshd -T | grep -i pubkeyauthentican
+- expected outputs:
+passwordauthentication no
+pubkeyauthentication yes
+
+# Step 7
+    - Test from clean client with no keys
+ssh <VM-Name>@<VM-IP>
+- this SHOULD fail with a permission denied error
+- you now log in with key-based login
+- go back to machine with keys loaded and attempt to SSH in with prior command
+- this should now succeed without any prompt for a password, if you have a passPHRASE it may prompt locally
+
+
+# END
