@@ -43,3 +43,5 @@ fixed by using heredoc (<<E0F)
 fixed by installing standalone docker compose
 - -d flag not recognized
 Fixed once proper docker compose was installed
+-Issues enforcing key-only login due to cloud-init.conf file overriding sshd_config file policies.
+fixed by changing policy in both configs
