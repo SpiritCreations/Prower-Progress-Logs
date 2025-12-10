@@ -45,7 +45,7 @@ sudo systemctl restart ssh
 # Step 6
     - Verify running configs
 sudo sshd -T | grep -i passwordauthentication
-sudo sshd -T | grep -i pubkeyauthentican
+sudo sshd -T | grep -i pubkeyauthentication
 - expected outputs:
 passwordauthentication no
 pubkeyauthentication yes
