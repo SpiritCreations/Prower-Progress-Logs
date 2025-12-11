@@ -20,7 +20,7 @@ Fresh proxmox host.
 PubkeyAuthentication yes (may need to manually write this into config depending on version)
 PasswordAuthentication no
  UsePAM no
-- Added weekly maintenance shutdown timers
+- Added weekly maintenance restart timer to clean out junk, also ensures the stack recovers cleanly
 ## Problems
 - Issues enforcing key-only login due to cloud-init.conf file overriding sshd_config file policies.
 fixed by changing policy in both configs
