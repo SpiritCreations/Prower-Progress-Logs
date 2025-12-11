@@ -22,6 +22,7 @@ Fresh proxmox host.
 PubkeyAuthentication yes (may need to manually write this into config depending on version)
 PasswordAuthentication no
  UsePAM no
+- added weekly reset timer (set to 15 minutes after Infra-VM, that way it restarts after the other vm reboots)
 
 
 ### Created Directories
