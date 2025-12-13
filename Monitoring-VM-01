@@ -24,6 +24,13 @@ PasswordAuthentication no
  UsePAM no
 - added weekly reset timer (set to 15 minutes after Infra-VM, that way it restarts after the other vm reboots)
 
+- 12/13/2025
+- Installed unattended upgrades
+- Enabled daily security updates
+- Disabled automatic reboot
+- Weekly reset timer is handled in the same reboot as the dump cleaning reboot added above this entry
+- Verified through dryrun
+
 
 ### Created Directories
 - ~/monitoring
