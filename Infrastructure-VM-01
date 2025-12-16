@@ -30,6 +30,12 @@ PasswordAuthentication no
 - Weekly reboot handled by systemd timer 
 - Verified through dryrun
 
+- 12/16/2025
+- Installed UFW
+- Default denied inbound, allow outbound
+- Allow SSH rule 
+- Firewall enabled and verified through SSH
+
 
 ## Problems
 - Issues enforcing key-only login due to cloud-init.conf file overriding sshd_config file policies.
