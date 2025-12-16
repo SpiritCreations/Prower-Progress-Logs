@@ -31,6 +31,15 @@ PasswordAuthentication no
 - Weekly reset timer is handled in the same reboot as the dump cleaning reboot added above this entry
 - Verified through dryrun
 
+- 12/162025
+- Installed UFW
+- Default deny incoming, allow outbound
+- Explicitly allowed:
+SSH (22)
+Grafana (3000)
+Prometheus (9090)
+Node Exporter (9100)
+
 
 ### Created Directories
 - ~/monitoring
