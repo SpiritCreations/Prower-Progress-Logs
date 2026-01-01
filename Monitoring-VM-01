@@ -16,6 +16,8 @@ Fresh proxmox host.
 - Verified installations
 - installed and configured SSH keys
 - Edited config files
+- Added alertmanager (WIP)
+
 /etc/ssh/sshd_config
 /etc/ssh/sshd_config.d/50-cloud-init.conf
 * edit lines to reflect:
@@ -49,15 +51,22 @@ Node Exporter (9100)
 
 
 ### Created Directories
-- ~/monitoring
+- /opt/monitoring/{prometheus,grafana}
+- /opt/monitoring/grafana/data
+- /opt/monitoring/prometheus/rules
+- /opt/monitoring/alertmanager/templates
+
 
 
 ### Created files
-- docker-compose.yml
+- prometheus.yml
+- compose.yaml
+- alertmanager.yml
 - Stack includes: 
 Prometheus
 Grafana
 Node Exporter
+Alertmanager
 ### ^ Created usding heredoc (due to SSH paste corruption).
 
 ## Problems
