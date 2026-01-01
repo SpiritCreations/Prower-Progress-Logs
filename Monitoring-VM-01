@@ -25,7 +25,7 @@ PasswordAuthentication no
 - added weekly reset timer (set to 15 minutes after Infra-VM, that way it restarts after the other vm reboots)
 
 - 12/13/2025
-- Installed unattended upgrades
+- Installed unattended upgrades *
 - Enabled daily security updates
 - Disabled automatic reboot
 - Weekly reset timer is handled in the same reboot as the dump cleaning reboot added above this entry
@@ -69,3 +69,9 @@ fixed by installing standalone docker compose
 Fixed once proper docker compose was installed
 - Issues enforcing key-only login due to cloud-init.conf file overriding sshd_config file policies.
 fixed by changing policy in both configs
+
+# Things to know *
+##Unattended upgrades
+-check these log locations if unattended upgrades auto reboot causes issue or breaks
+/var/log/unattended-upgrades/unattended-upgrades.log
+/var/log/unattended-upgrades/unattended-upgrades-dpkg.log
