@@ -1,0 +1,12 @@
+#Goals
+- use for testing additions prior to deployment
+- make a baseline template
+- replica environment of currently running server containers which allows for easily adaptable script trialing.
+
+###Baseline
+- Proxmox Container
+- Debian 12.12-1
+- MEMORY: 3.73 GiB
+- SWAP: 0
+- CORES: 2
+- DISK: 32G
