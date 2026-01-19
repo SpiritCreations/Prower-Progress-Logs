@@ -13,3 +13,5 @@
 ----- ALL SERVICES ONLINE ------
 
 ^^ will edit and make more prof later ^^
+
+worth to note that server auto start didn't function as expected and a manual launch had to be done through "java -Xmx3G -jar fabric-server-launch.jar nogui"
