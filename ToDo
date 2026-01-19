@@ -12,6 +12,7 @@
 - learn basic bash scripting (auto-filling template should be simple enough) 
 - build local LLM and just kinda mess around with it
 - fill out postmortem and find a format that makes sense, then standardize it in seperate repo 
+- fix CEJ auto server launch script, (have it run in tmux, or uninstall tmux and change to screen)
 
 
 #Further down-the-line projects
