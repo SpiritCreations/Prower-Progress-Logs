@@ -1,0 +1,15 @@
+1030 JST initial shutdown
+1034 node powered on
+1036 JST second shutdown (pushing updates to grub and initramfs)
+1038 node powered on
+1042 GPU is being detected and has been manually added through raw device to Metal-01 VM
+1042 Metal-01 VM started to verify GPU passthrough functioning as expected
+1044 installing nvidia drivers to verify GPU is being detected through nvidia-smi
+1046 nvidia drivers finished installation and vm rebooted
+1047 CEJ, Infra-01, Monitoring-01 services rebooting
+1049 Monitoring-01 restored full functionality
+1049 Infra-01 restored full functionality
+1052 CEJ restored full functionality
+----- ALL SERVICES ONLINE ------
+
+^^ will edit and make more prof later ^^
