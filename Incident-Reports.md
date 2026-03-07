@@ -66,4 +66,5 @@ Three compounding issues:
 ### Follow-up Actions
 - [ ] Configure Node Exporter down alert rule in Prometheus
 - [ ] Add journal log retention cap to standard VM build checklist
-- [ ] Investigate when and how bare metal Node Exporter was installed
+- [x] Investigate when and how bare metal Node Exporter was installed
+  - 03-08-2026 - When originally setting up Node Exporter email/discord alerts I could not get it working, I returned to the project at a later date, followed a different guide thus leaving behind deprecated objects that caused this conflict. Now resolved.
