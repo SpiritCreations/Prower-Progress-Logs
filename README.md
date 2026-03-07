@@ -53,6 +53,7 @@ Each file corresponds to a VM, Container, or topic on prower. The structure is a
 ## Changes (dated)
 ## Problems and Resolutions
 ## Current Status
+## Notes
 ```
 
 Notable files:
