@@ -2,7 +2,7 @@
 
 > Tiered, hardware-backed authentication across Prower using 3x YubiKey 5 devices.
 
-*Related: ['SSH Key Only Setup steps.md'](SSH Key Only Setup steps.md) for the underlying SSH key-only baseline this builds on top of.*
+*Related: [SSH Key Only Setup steps.md](<SSH Key Only Setup steps.md>) for the underlying SSH key-only baseline this builds on top of.*
 
 ---
 
